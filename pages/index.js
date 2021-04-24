@@ -29,16 +29,23 @@ const Portfolio = () => {
   return (
     <div>
       <Head>
-        <title>Ahamed's portfolio</title>
-        <meta name='twitter:card' content='summary' />
-        <meta name='twitter:image' content={`${pageUrl}ahamed-rasheed.png`} />
-        <meta name='twitter:site' content='@Ahamed__r' />
-        <meta name='twitter:description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient with NextJS - ReactJS, Familiar with other Web Development Techs.' />
+        <title>Hey 👋 Im Ahamed</title>
+        <meta name='title' content='Hey 👋 Im Ahamed' />
+        <meta name='description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient with NextJS - ReactJS, Familiar with other Web Development Techs.' />
 
+        <meta property='og:type' content='website' />
         <meta property='og:url' content={pageUrl} />
         <meta property='og:title' content='Hey 👋 Im Ahamed' />
         <meta property='og:description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient with NextJS - ReactJS, Familiar with other Web Development Techs.' />
         <meta property='og:image' content={`${pageUrl}ahamed-rasheed.png`} />
+
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta property='twitter:url' content={pageUrl} />
+        <meta property='twitter:title' content='Hey 👋 Im Ahamed' />
+        <meta property='twitter:description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient with NextJS - ReactJS, Familiar with other Web Development Techs.' />
+        <meta property='twitter:image' content={`${pageUrl}ahamed-rasheed.png`} />
+        <meta name='twitter:site' content='@Ahamed__r' />
+
       </Head>
 
       <main className={styles.container}>
