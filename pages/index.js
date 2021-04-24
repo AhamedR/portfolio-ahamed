@@ -9,6 +9,7 @@ const instagram = process.env.NEXT_PUBLIC_INSTAGRAM_URL
 const Portfolio = () => {
   const [greeting, setGreeting] = useState('Hey 👋')
   const [showSecret, setShowSecret] = useState(false)
+  const [pageUrl, setPageUrl] = useState('')
 
   useEffect(() => {
     const today = new Date()
@@ -21,12 +22,18 @@ const Portfolio = () => {
     } else {
       setGreeting('Good Evening 🌃')
     }
+
+    setPageUrl(window.location.href)
   }, [])
 
   return (
     <div>
       <Head>
         <title>Ahamed's portfolio</title>
+        <meta property='og:url' content={pageUrl} />
+        <meta property='og:title' content='Hey 👋 Im Ahamed' />
+        <meta property='og:description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient with NextJS - ReactJS, Familiar with other Web Development Techs.' />
+        <meta property='og:image' content={`${pageUrl}ahamed-rasheed.png`} />
       </Head>
 
       <main className={styles.container}>
