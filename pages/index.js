@@ -1,65 +1,58 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { useEffect, useState } from 'react'
+import styles from '../styles/portfolio.module.scss'
 
-export default function Home() {
+const linkedIn = process.env.NEXT_PUBLIC_LINKEDIN
+const twitter = process.env.NEXT_PUBLIC_TWITTER
+const instagram = process.env.NEXT_PUBLIC_INSTAGRAM
+
+const Portfolio = () => {
+  const [greeting, setGreeting] = useState('Hey 👋')
+  const [showSecret, setShowSecret] = useState(false)
+
+  useEffect(() => {
+    let today = new Date()
+    let currentHour = today.getHours()
+
+    if (currentHour < 12) {
+      setGreeting('Good Morning 🌅')
+    } else if (currentHour < 18) {
+      setGreeting('Good Afternoon 🌇')
+    } else {
+      setGreeting('Good Evening 🌃')
+    }
+  }, [])
+
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Ahamed's portfolio</title>
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+      <main className={styles.container}>
+        <section className={styles.landing}>
+          <h1 className={styles.landingGreeting}>{greeting}</h1>
+          <p className={styles.landingDesciption}>
+            I'am Ahamed! and I work as a Software Engineer at Soho App. Proficient with NextJS - ReactJS, Familiar with other Web Development Techs.
+          </p>
+          <p className={styles.landingSocial}>
+            You can follow me on <a href={linkedIn} target="_blank">LinkedIn</a>, <a href="" target="_blank">Twitter</a> and <a href="" target="_blank">Instagram</a>.
+          </p>
+          <p className={styles.landingSecret}>
+            <button
+              className={styles.landingSecretReveal}
+              onClick={() => setShowSecret(!showSecret)}
+            >
+              And a Secret..
+            </button>
+            <span reveal={showSecret.toString()} className={styles.landingSecretMessage}>
+              On my spare time, I Work as a Stunt double for Spider Man 🙈
+            </span>
+          </p>
+        </section>
       </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
     </div>
   )
 }
+
+export default Portfolio
