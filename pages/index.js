@@ -30,6 +30,11 @@ const Portfolio = () => {
     <div>
       <Head>
         <title>Ahamed's portfolio</title>
+        <meta name='twitter:card' content='summary' />
+        <meta name='twitter:image' content={`${pageUrl}ahamed-rasheed.png`} />
+        <meta name='twitter:site' content='@Ahamed__r' />
+        <meta name='twitter:description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient with NextJS - ReactJS, Familiar with other Web Development Techs.' />
+
         <meta property='og:url' content={pageUrl} />
         <meta property='og:title' content='Hey 👋 Im Ahamed' />
         <meta property='og:description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient with NextJS - ReactJS, Familiar with other Web Development Techs.' />
