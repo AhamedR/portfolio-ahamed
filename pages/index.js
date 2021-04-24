@@ -27,6 +27,10 @@ const Portfolio = () => {
     <div>
       <Head>
         <title>Ahamed's portfolio</title>
+        <meta property='og:url' content={window.location.href} />
+        <meta property='og:title' content='Hey 👋 Im Ahamed' />
+        <meta property='og:description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient with NextJS - ReactJS, Familiar with other Web Development Techs.' />
+        <meta property='og:image' content={`${window.location.href}ahamed-rasheed.png`} />
       </Head>
 
       <main className={styles.container}>
