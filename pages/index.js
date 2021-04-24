@@ -2,17 +2,17 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import styles from '../styles/portfolio.module.scss'
 
-const linkedIn = process.env.NEXT_PUBLIC_LINKEDIN
-const twitter = process.env.NEXT_PUBLIC_TWITTER
-const instagram = process.env.NEXT_PUBLIC_INSTAGRAM
+const linkedIn = process.env.NEXT_PUBLIC_LINKEDIN_URL
+const twitter = process.env.NEXT_PUBLIC_TWITTER_URL
+const instagram = process.env.NEXT_PUBLIC_INSTAGRAM_URL
 
 const Portfolio = () => {
   const [greeting, setGreeting] = useState('Hey 👋')
   const [showSecret, setShowSecret] = useState(false)
 
   useEffect(() => {
-    let today = new Date()
-    let currentHour = today.getHours()
+    const today = new Date()
+    const currentHour = today.getHours()
 
     if (currentHour < 12) {
       setGreeting('Good Morning 🌅')
@@ -36,7 +36,7 @@ const Portfolio = () => {
             I'am Ahamed! and I work as a Software Engineer at Soho App. Proficient with NextJS - ReactJS, Familiar with other Web Development Techs.
           </p>
           <p className={styles.landingSocial}>
-            You can follow me on <a href={linkedIn} target="_blank">LinkedIn</a>, <a href="" target="_blank">Twitter</a> and <a href="" target="_blank">Instagram</a>.
+            You can follow me on <a href={linkedIn} target='_blank' rel='noreferrer'>LinkedIn</a>, <a href={twitter} target='_blank' rel='noreferrer'>Twitter</a> and <a href={instagram} target='_blank' rel='noreferrer'>Instagram</a>.
           </p>
           <p className={styles.landingSecret}>
             <button
