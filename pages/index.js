@@ -5,6 +5,8 @@ import styles from '../styles/portfolio.module.scss'
 const linkedIn = process.env.NEXT_PUBLIC_LINKEDIN_URL
 const twitter = process.env.NEXT_PUBLIC_TWITTER_URL
 const instagram = process.env.NEXT_PUBLIC_INSTAGRAM_URL
+const github = process.env.NEXT_PUBLIC_GITHUB_URL
+const soho = process.env.NEXT_PUBLIC_SOHOAPP_URL
 
 const Portfolio = () => {
   const [greeting, setGreeting] = useState('Hey 👋')
@@ -32,7 +34,6 @@ const Portfolio = () => {
         <title>Hey 👋 Im Ahamed</title>
         <meta name='title' content='Hey 👋 Im Ahamed' />
         <meta name='description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient in Web Development.' />
-
         <meta property='og:type' content='website' />
         <meta property='og:url' content={pageUrl} />
         <meta property='og:title' content='Hey 👋 Im Ahamed' />
@@ -52,10 +53,10 @@ const Portfolio = () => {
         <section className={styles.landing}>
           <h1 className={styles.landingGreeting}>{greeting}</h1>
           <p className={styles.landingDesciption}>
-            I'am Ahamed! and I work as a Software Engineer at Soho App. Proficient in Web Development.
+            I'am Ahamed! and I work as a Software Engineer at <a href={soho} target='_blank' rel='noreferrer'>Soho App</a>. Proficient in Web Development.
           </p>
           <p className={styles.landingSocial}>
-            You can follow me on <a href={linkedIn} target='_blank' rel='noreferrer'>LinkedIn</a>, <a href={twitter} target='_blank' rel='noreferrer'>Twitter</a> and <a href={instagram} target='_blank' rel='noreferrer'>Instagram</a> & View my recent projects on <a href={linkedIn} target='_blank' rel='noreferrer'>GitHub</a>.
+            You can follow me on <a href={linkedIn} target='_blank' rel='noreferrer'>LinkedIn</a>, <a href={twitter} target='_blank' rel='noreferrer'>Twitter</a> and <a href={instagram} target='_blank' rel='noreferrer'>Instagram</a> & View my recent projects on <a href={github} target='_blank' rel='noreferrer'>GitHub</a>.
           </p>
           <p className={styles.landingSecret}>
             <button
