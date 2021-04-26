@@ -31,18 +31,18 @@ const Portfolio = () => {
       <Head>
         <title>Hey 👋 Im Ahamed</title>
         <meta name='title' content='Hey 👋 Im Ahamed' />
-        <meta name='description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient with NextJS - ReactJS, Familiar with other Web Development Techs.' />
+        <meta name='description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient in Web Development.' />
 
         <meta property='og:type' content='website' />
         <meta property='og:url' content={pageUrl} />
         <meta property='og:title' content='Hey 👋 Im Ahamed' />
-        <meta property='og:description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient with NextJS - ReactJS, Familiar with other Web Development Techs.' />
+        <meta property='og:description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient in Web Development.' />
         <meta property='og:image' content={`${pageUrl}ahamed-rasheed.png`} />
 
         <meta property='twitter:card' content='summary_large_image' />
         <meta property='twitter:url' content={pageUrl} />
         <meta property='twitter:title' content='Hey 👋 Im Ahamed' />
-        <meta property='twitter:description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient with NextJS - ReactJS, Familiar with other Web Development Techs.' />
+        <meta property='twitter:description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient in Web Development.' />
         <meta property='twitter:image' content={`${pageUrl}ahamed-rasheed.png`} />
         <meta name='twitter:site' content='@Ahamed__r' />
 
@@ -52,10 +52,10 @@ const Portfolio = () => {
         <section className={styles.landing}>
           <h1 className={styles.landingGreeting}>{greeting}</h1>
           <p className={styles.landingDesciption}>
-            I'am Ahamed! and I work as a Software Engineer at Soho App. Proficient with NextJS - ReactJS, Familiar with other Web Development Techs.
+            I'am Ahamed! and I work as a Software Engineer at Soho App. Proficient in Web Development.
           </p>
           <p className={styles.landingSocial}>
-            You can follow me on <a href={linkedIn} target='_blank' rel='noreferrer'>LinkedIn</a>, <a href={twitter} target='_blank' rel='noreferrer'>Twitter</a> and <a href={instagram} target='_blank' rel='noreferrer'>Instagram</a>.
+            You can follow me on <a href={linkedIn} target='_blank' rel='noreferrer'>LinkedIn</a>, <a href={twitter} target='_blank' rel='noreferrer'>Twitter</a> and <a href={instagram} target='_blank' rel='noreferrer'>Instagram</a> & View my recent projects on <a href={linkedIn} target='_blank' rel='noreferrer'>GitHub</a>.
           </p>
           <p className={styles.landingSecret}>
             <button
