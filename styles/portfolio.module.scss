@@ -1,4 +1,6 @@
 @import 'variables.module.scss';
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 .container {
   min-height: 100vh;
@@ -7,7 +9,33 @@
   flex-direction: column;
   justify-content: center;
   background: $primary-color;
+  font-family: 'Lato', 'Work Sans', sans-serif;
 
+  background-image:linear-gradient(to top, $primary-color, $primary-color-low), url('../public/background.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right top;
+
+  a {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      bottom: 0;
+      content: '';
+      height: 40%;
+      width: 100%;
+      border-radius: 5px 5px 0 0;
+      transition: all .1s ease;
+      background: rgba(255, 193, 193, 0.427);
+    }
+
+    &:hover {
+      &::before {
+        height: 100%;
+      }
+    }
+  }
   .landing {
     padding: 5rem 10%;
     display: flex;
@@ -15,24 +43,26 @@
     justify-content: center;
 
     &Greeting {
-      font-size: $primary-color-1;
+      font-size: $primary-font-1;
     }
 
     &Desciption {
-      font-size: $secondary-color-1;
+      font-size: $secondary-font-1;
     }
 
     &Social {
-      font-size: $secondary-color-1;
+      margin-top: 0;
+      font-size: $secondary-font-1;
     }
 
     &Secret {
       display: flex;
       flex-direction: column;
-      font-size: $secondary-color-2;
+      font-size: $secondary-font-2;
 
       &Reveal {
-        font-size: $secondary-color-2;
+        font-family: 'Lato', 'Work Sans', sans-serif;
+        font-size: $secondary-font-2;
         width: fit-content;
         margin: 16px 0;
         background: transparent;
