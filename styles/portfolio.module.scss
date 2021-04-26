@@ -11,31 +11,35 @@
   background: $primary-color;
   font-family: 'Lato', 'Work Sans', sans-serif;
 
-  background-image:linear-gradient(to top, $primary-color, $primary-color-low), url('../public/background.png');
+  background-image:linear-gradient(to top, $primary-color, $primary-color-low-1), url('../public/background.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right top;
 
   a {
     position: relative;
+    cursor: pointer;
 
-    &::before {
+    &::after {
       position: absolute;
       bottom: 0;
+      left: 0;
       content: '';
       height: 40%;
       width: 100%;
       border-radius: 5px 5px 0 0;
       transition: all .1s ease;
-      background: rgba(255, 193, 193, 0.427);
+      background: $secondary-color-low-1;
     }
 
     &:hover {
-      &::before {
+      &::after {
         height: 100%;
+        background: $secondary-color-low-2;
       }
     }
   }
+
   .landing {
     padding: 5rem 10%;
     display: flex;
