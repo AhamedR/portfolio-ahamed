@@ -1,4 +1,5 @@
 @import 'variables.module.scss';
+@import '_colorThemes.module.scss';
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
@@ -8,10 +9,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: $primary-color;
   font-family: 'Lato', 'Work Sans', sans-serif;
+  
+  @include themed() {
+    background: t('primary-color');
+    background-image:linear-gradient(to top, t('primary-color'), t('primary-color-low-1')), url('../public/background.png');
+  }
 
-  background-image:linear-gradient(to top, $primary-color, $primary-color-low-1), url('../public/background.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right top;
@@ -29,13 +33,17 @@
       width: 100%;
       border-radius: 5px 5px 0 0;
       transition: all .1s ease;
-      background: $secondary-color-low-1;
+      @include themed() {
+        background: t('secondary-color-low-1');
+      }
     }
 
     &:hover {
       &::after {
         height: 100%;
-        background: $secondary-color-low-2;
+        @include themed() {
+          background: t('secondary-color-low-2');
+        }
       }
     }
   }

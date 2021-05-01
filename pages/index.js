@@ -49,7 +49,7 @@ const Portfolio = () => {
 
       </Head>
 
-      <main className={styles.container}>
+      <main className={[styles.container, false ? 'theme--dark' : 'theme--default'].join(' ')}>
         <section className={styles.landing}>
           <h1 className={styles.landingGreeting}>{greeting}</h1>
           <p className={styles.landingDesciption}>

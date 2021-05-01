@@ -1,13 +1,26 @@
 // Colors
 
-$primary-color: #f7f7f7;
-$primary-color-low-1: rgba(255, 255, 255, .92);
+    // Light
+    $primary-font-light-color: #222222;
 
-$secondary-color: #ffc1c1;
-$secondary-color-low-1: rgba(255, 193, 193, 0.427);
-$secondary-color-low-2: rgba(255, 193, 193, 0.327);
+    $primary-light-color: #f7f7f7;
+    $primary-light-color-low-1: rgba(255, 255, 255, .92);
+
+    $secondary-light-color: #ffc1c1;
+    $secondary-light-color-low-1: rgba(255, 193, 193, 0.427);
+    $secondary-light-color-low-2: rgba(255, 193, 193, 0.327);
+
+    // Dark
+    $primary-font-dark-color: #f7f7f7;
+
+    $primary-dark-color: #222222;
+    $primary-dark-color-low-1: rgba(38, 38, 38, 0.92);
+
+    $secondary-dark-color: #ffc1c1;
+    $secondary-dark-color-low-1: rgba(16, 12, 12, 0.427);
+    $secondary-dark-color-low-2: rgba(16, 12, 12, 0.327);
 
 // Font-size
-$primary-font-1: 2.5rem;
-$secondary-font-1: 1.5rem;
-$secondary-font-2: 1rem;
+    $primary-font-1: 2.5rem;
+    $secondary-font-1: 1.5rem;
+    $secondary-font-2: 1rem;

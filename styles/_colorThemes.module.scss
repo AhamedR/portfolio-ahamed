@@ -1,0 +1,42 @@
+//shortcuts
+@import 'variables.module.scss';
+//https://medium.com/@katiemctigue/how-to-create-a-dark-mode-in-sass-609f131a3995
+$themes: (
+  default: (
+    font:#eee,
+    primary-color: $primary-light-color,
+    primary-color-1: $primary-light-color-low-1,
+    secondary-color: $secondary-light-color,
+    secondary-color-low-1: $secondary-light-color-low-1,
+    secondary-color-low-2: $secondary-light-color-low-2,
+  ),
+  dark: (
+    font:$primary-font-dark-color,
+    primary-bg: $primary-dark-color,
+    primary-bg-1: $primary-dark-color-low-1,
+    secondary-color: $secondary-dark-color,
+    secondary-color-low-1: $secondary-dark-color-low-1,
+    secondary-color-low-2: $secondary-dark-color-low-2,
+  ),
+);
+
+@mixin themed() {
+  @each $theme, $map in $themes {
+
+    .theme--#{$theme} & {
+      $theme-map: () !global;
+
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), '#{$key}');
+        $theme-map: map-merge($theme-map, ($key: $value)) !global;
+      }
+
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function t($key) {
+  @return map-get($theme-map, $key);
+}
