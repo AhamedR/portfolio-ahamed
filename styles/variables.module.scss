@@ -1,13 +1,31 @@
 // Colors
 
-$primary-color: #f7f7f7;
-$primary-color-low-1: rgba(255, 255, 255, .92);
+.lightTheme {
+  --primary-font-color: #222222;
+  --primary-color: #ececec;
+  --primary-color-low-1: rgba(255, 255, 255, .92);
+  --secondary-color: #ffc1c1;
+  --secondary-color-low-1: rgba(255, 193, 193, 0.427);
+  --secondary-color-low-2: rgba(255, 193, 193, 0.327);
+}
 
-$secondary-color: #ffc1c1;
-$secondary-color-low-1: rgba(255, 193, 193, 0.427);
-$secondary-color-low-2: rgba(255, 193, 193, 0.327);
+.darkTheme {
+  --primary-font-color: #e6e6e6;
+  --primary-color: #303030;
+  --primary-color-low-1: rgba(38, 38, 38, 0.92);
+  --secondary-color: #ffc1c1;
+  --secondary-color-low-1: rgba(255, 149, 149, 0.427);
+  --secondary-color-low-2: rgba(255, 210, 210, 0.327);
+}
+
+$primary-toggle-color: #fc8e36;
+$secondary-toggle-color: #393991;
+$toggle-shadow-color:rgba(0, 0, 0,.5);
 
 // Font-size
 $primary-font-1: 2.5rem;
 $secondary-font-1: 1.5rem;
 $secondary-font-2: 1rem;
+
+// screen size
+$mobile-width: 544px;

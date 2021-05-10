@@ -8,10 +8,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: $primary-color;
+  background: var(--primary-color);
   font-family: 'Lato', 'Work Sans', sans-serif;
+  color: var(--primary-font-color);
+  position: relative;
 
-  background-image:linear-gradient(to top, $primary-color, $primary-color-low-1), url('../public/background.png');
+  background-image:linear-gradient(to top, var(--primary-color), var(--primary-color-low-1)), url('../public/background.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right top;
@@ -29,13 +31,90 @@
       width: 100%;
       border-radius: 5px 5px 0 0;
       transition: all .1s ease;
-      background: $secondary-color-low-1;
+      background: var(--secondary-color-low-1);
     }
 
     &:hover {
       &::after {
         height: 100%;
-        background: $secondary-color-low-2;
+        background: var(--secondary-color-low-2);
+      }
+    }
+  }
+
+  &Toggle {
+    position: absolute;
+    top: 3vh;
+    right: 5vh;
+
+    & > input {
+      position: relative;
+      width: 60px;
+      height: 40px;
+      appearance: none;
+
+      @media (max-width: $mobile-width) {
+        width: 50px;
+        height: 30px;
+      }
+
+      display: flex;
+      align-items: center;
+
+      transition: all .8s ease-in-out;
+      border-radius: 20px 10px 50px 20px;
+
+      background-image: url('../public/theme/backgroundLight.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    input:checked {
+      border-radius: 10px 20px 10px 50px;
+      background-image: url('../public/theme/backgroundDark.png');
+    }
+
+    input:before {
+      position: absolute;
+      left: calc(-100% + 35px);
+      content: '';
+      width: 60px;
+      height: 60px;
+
+      transition: all .3s ease-in-out;
+      border-radius: 50%;
+
+      background-image: url("../public/theme/light");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 35px 35px;
+
+      filter: drop-shadow(2px 2px 3px $toggle-shadow-color);
+
+      @media (max-width: $mobile-width) {
+        width: 40px;
+        height: 40px;
+        background-size: 25px 25px;
+      }
+    }
+
+    input:checked::before {
+      left: calc(100% - 35px);
+
+      background: transparent;
+      background-image: url("../public/theme/dark");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 35px 35px;
+
+      filter: drop-shadow(-2px 2px 3px $toggle-shadow-color);
+
+      @media (max-width: $mobile-width) {
+        left: calc(100% - 25px);
+        width: 40px;
+        height: 40px;
+        background-size: 25px 25px;
       }
     }
   }
@@ -65,6 +144,7 @@
       font-size: $secondary-font-2;
 
       &Reveal {
+        color: var(--primary-font-color);
         font-family: 'Lato', 'Work Sans', sans-serif;
         font-size: $secondary-font-2;
         width: fit-content;
@@ -73,6 +153,7 @@
         border: none;
         padding: 0;
         outline: none;
+        cursor: pointer;
       }
 
       &Message {
