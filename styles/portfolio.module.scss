@@ -85,7 +85,7 @@
       transition: all .3s ease-in-out;
       border-radius: 50%;
 
-      background-image: url("../public/theme/light");
+      background-image: url("../public/theme/light.png");
       background-position: center;
       background-repeat: no-repeat;
       background-size: 35px 35px;
@@ -103,7 +103,7 @@
       left: calc(100% - 35px);
 
       background: transparent;
-      background-image: url("../public/theme/dark");
+      background-image: url("../public/theme/dark.png");
       background-position: center;
       background-repeat: no-repeat;
       background-size: 35px 35px;
