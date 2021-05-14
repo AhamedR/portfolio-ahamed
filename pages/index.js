@@ -47,7 +47,6 @@ const Portfolio = () => {
         <link rel='icon' type='image/png' sizes='32x32' href='/favicon/favicon-32x32.png' />
         <link rel='icon' type='image/png' sizes='96x96' href='/favicon/favicon-96x96.png' />
         <link rel='icon' type='image/png' sizes='16x16' href='/favicon/favicon-16x16.png' />
-        <link rel='manifest' href='/favicon/manifest.json' />
         <meta name='msapplication-TileColor' content='#ffffff' />
         <meta name='msapplication-TileImage' content='/favicon/ms-icon-144x144.png' />
         <meta name='theme-color' content='#ffffff' />
@@ -66,6 +65,8 @@ const Portfolio = () => {
         <meta property='twitter:description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient in Web Development.' />
         <meta property='twitter:image' content={`${pageUrl}ahamed-rasheed.png`} />
         <meta name='twitter:site' content='@Ahamed__r' />
+
+        <link rel='manifest' href='/manifest.json' />
       </Head>
 
       <main className={[styles.container, isDarkTheme ? styles.darkTheme : styles.lightTheme].join(' ')}>
