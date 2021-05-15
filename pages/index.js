@@ -33,24 +33,6 @@ const Portfolio = () => {
     <div>
       <Head>
         <title>Hey 👋 Im Ahamed</title>
-
-        <link rel='apple-touch-icon' sizes='57x57' href='/favicon/apple-icon-57x57.png' />
-        <link rel='apple-touch-icon' sizes='60x60' href='/favicon/apple-icon-60x60.png' />
-        <link rel='apple-touch-icon' sizes='72x72' href='/favicon/apple-icon-72x72.png' />
-        <link rel='apple-touch-icon' sizes='76x76' href='/favicon/apple-icon-76x76.png' />
-        <link rel='apple-touch-icon' sizes='114x114' href='/favicon/apple-icon-114x114.png' />
-        <link rel='apple-touch-icon' sizes='120x120' href='/favicon/apple-icon-120x120.png' />
-        <link rel='apple-touch-icon' sizes='144x144' href='/favicon/apple-icon-144x144.png' />
-        <link rel='apple-touch-icon' sizes='152x152' href='/favicon/apple-icon-152x152.png' />
-        <link rel='apple-touch-icon' sizes='180x180' href='/favicon/apple-icon-180x180.png' />
-        <link rel='icon' type='image/png' sizes='192x192' href='/favicon/android-icon-192x192.png' />
-        <link rel='icon' type='image/png' sizes='32x32' href='/favicon/favicon-32x32.png' />
-        <link rel='icon' type='image/png' sizes='96x96' href='/favicon/favicon-96x96.png' />
-        <link rel='icon' type='image/png' sizes='16x16' href='/favicon/favicon-16x16.png' />
-        <meta name='msapplication-TileColor' content='#ffffff' />
-        <meta name='msapplication-TileImage' content='/favicon/ms-icon-144x144.png' />
-        <meta name='theme-color' content='#ffffff' />
-
         <meta name='title' content='Hey 👋 Im Ahamed' />
         <meta name='description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient in Web Development.' />
         <meta property='og:type' content='website' />
@@ -65,13 +47,11 @@ const Portfolio = () => {
         <meta property='twitter:description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient in Web Development.' />
         <meta property='twitter:image' content={`${pageUrl}ahamed-rasheed.png`} />
         <meta name='twitter:site' content='@Ahamed__r' />
-
-        <link rel='manifest' href='/manifest.json' />
       </Head>
 
       <main className={[styles.container, isDarkTheme ? styles.darkTheme : styles.lightTheme].join(' ')}>
-        <label className={styles.containerToggle}>
-          <input type='checkbox' onClick={() => setIsDarkTheme(!isDarkTheme)} />
+        <label htmlFor='theme' className={styles.containerToggle}>
+          <input id='theme' type='checkbox' onClick={() => setIsDarkTheme(!isDarkTheme)} />
         </label>
         <section className={styles.landing}>
           <h1 className={styles.landingGreeting}>{greeting}</h1>
