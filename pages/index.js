@@ -7,6 +7,7 @@ const twitter = process.env.NEXT_PUBLIC_TWITTER_URL
 const instagram = process.env.NEXT_PUBLIC_INSTAGRAM_URL
 const github = process.env.NEXT_PUBLIC_GITHUB_URL
 const soho = process.env.NEXT_PUBLIC_SOHOAPP_URL
+const swivel = process.env.NEXT_PUBLIC_SWIVEL_URL
 
 const Portfolio = () => {
   const [greeting, setGreeting] = useState('Hey 👋')
@@ -34,17 +35,17 @@ const Portfolio = () => {
       <Head>
         <title>Hey 👋 Im Ahamed</title>
         <meta name='title' content='Hey 👋 Im Ahamed' />
-        <meta name='description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient in Web Development.' />
+        <meta name='description' content='Im Ahamed! and I work as a Senior Software Engineer at Swivel Group. Proficient in Web Development.' />
         <meta property='og:type' content='website' />
         <meta property='og:url' content={pageUrl} />
         <meta property='og:title' content='Hey 👋 Im Ahamed' />
-        <meta property='og:description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient in Web Development.' />
+        <meta property='og:description' content='Im Ahamed! and I work as a Senior Software Engineer at Swivel Group. Proficient in Web Development.' />
         <meta property='og:image' content={`${pageUrl}ahamed-rasheed.png`} />
 
         <meta property='twitter:card' content='summary_large_image' />
         <meta property='twitter:url' content={pageUrl} />
         <meta property='twitter:title' content='Hey 👋 Im Ahamed' />
-        <meta property='twitter:description' content='Im Ahamed! and I work as a Software Engineer at Soho App. Proficient in Web Development.' />
+        <meta property='twitter:description' content='Im Ahamed! and I work as a Senior Software Engineer at Swivel Group. Proficient in Web Development.' />
         <meta property='twitter:image' content={`${pageUrl}ahamed-rasheed.png`} />
         <meta name='twitter:site' content='@Ahamed__r' />
       </Head>
@@ -56,7 +57,7 @@ const Portfolio = () => {
         <section className={styles.landing}>
           <h1 className={styles.landingGreeting}>{greeting}</h1>
           <p className={styles.landingDesciption}>
-            I'am Ahamed! and I work as a Software Engineer at <a href={soho}>Soho App</a>. Proficient in Web Development.
+            I'am Ahamed! and I work as a Senior Software Engineer at <a href={swivel}>Swivel Group</a>. Proficient in Web Development.
           </p>
           <p className={styles.landingSocial}>
             You can follow me on <a href={linkedIn}>LinkedIn</a>, <a href={twitter}>Twitter</a> and <a href={instagram}>Instagram</a> & View my recent projects on <a href={github}>GitHub</a>.
