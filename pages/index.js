@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import styles from '../styles/portfolio.module.scss'
 
@@ -68,6 +69,14 @@ const Portfolio = () => {
               onClick={() => setShowSecret(!showSecret)}
             >
               And a Secret..
+              <div>
+                <Image
+                  src='/click.gif'
+                  width='60'
+                  height='50'
+                  quality='50'
+                />
+              </div>
             </button>
             <span reveal={showSecret.toString()} className={styles.landingSecretMessage}>
               On my spare time, I Work as a Stunt double for Spider Man 🙈

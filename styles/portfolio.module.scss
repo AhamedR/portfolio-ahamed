@@ -144,6 +144,7 @@
       font-size: $secondary-font-2;
 
       &Reveal {
+        position: relative;
         color: var(--primary-font-color);
         font-family: 'Lato', 'Work Sans', sans-serif;
         font-size: $secondary-font-2;
@@ -154,6 +155,20 @@
         padding: 0;
         outline: none;
         cursor: pointer;
+
+        & > div {
+          position: absolute;
+          right: -3rem;
+          top: -.5rem;
+
+          transition: all .5s ease;
+        }
+
+        &:hover {
+          & > div {
+            opacity: 0;
+          }
+        }
       }
 
       &Message {
