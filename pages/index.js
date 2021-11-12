@@ -29,6 +29,22 @@ const Portfolio = () => {
     }
 
     setPageUrl(window.location.href)
+
+    // Theme switch
+    if (window.matchMedia) {
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        // dark mode
+        setIsDarkTheme(true)
+      }
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
+        setIsDarkTheme(event.matches)
+      });
+    }
+
+    return () => {
+      window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', () => { console.log('Removed Event listener!') })
+    }
   }, [])
 
   return (
@@ -53,7 +69,7 @@ const Portfolio = () => {
 
       <main className={[styles.container, isDarkTheme ? styles.darkTheme : styles.lightTheme].join(' ')}>
         <label htmlFor='theme' className={styles.containerToggle}>
-          <input id='theme' type='checkbox' onClick={() => setIsDarkTheme(!isDarkTheme)} />
+          <input id='theme' type='checkbox' checked={isDarkTheme} onChange={() => setIsDarkTheme(!isDarkTheme)} />
         </label>
         <section className={styles.landing}>
           <h1 className={styles.landingGreeting}>{greeting}</h1>
@@ -71,6 +87,7 @@ const Portfolio = () => {
               And a Secret..
               <div>
                 <Image
+                  alt='Click here'
                   src='/click.gif'
                   width='60'
                   height='50'
